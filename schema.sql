@@ -1,7 +1,8 @@
 CREATE TABLE games (
 	id INT PRIMARY KEY,
 	Year INT,
-	City TEXT
+	City TEXT,
+	Season TEXT
 );
 
 CREATE TABLE events (
@@ -30,9 +31,12 @@ CREATE TABLE athlete_event (
 	medal TEXT
 );
 
-CREATE TABLE income_groups (
-	country_code TEXT,
+CREATE TABLE country (
+	country_code TEXT PRIMARY KEY,
 	region TEXT,
+	country_name TEXT,
+	noc_code TEXT,
+	team TEXT,	
 	income TEXT
 );
 
@@ -41,13 +45,6 @@ CREATE TABLE population (
 	country_code TEXT,
 	pop_year INT,
 	population INT
-);
-
-CREATE TABLE country (
-	country_code TEXT,
-	country_name TEXT,
-	noc_code TEXT,
-	team TEXT
 );
 
 
