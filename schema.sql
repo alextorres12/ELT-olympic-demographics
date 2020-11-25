@@ -13,22 +13,22 @@ CREATE TABLE events (
 );
 
 CREATE TABLE athlete_info (
-	id INT PRIMARY KEY,
-	name TEXT,
-	sex TEXT
+	ID INT PRIMARY KEY,
+	Name TEXT,
+	Sex TEXT
 );
 
 CREATE TABLE athlete_event (
-	athlete_id INT,
-	FOREIGN KEY (athlete_id) REFERENCES athlete_info(id),
-	age INT,
-	height INT,
-	weight FLOAT,
-	noc_code TEXT,
-	event TEXT,
+	ID INT,
+	FOREIGN KEY (ID) REFERENCES athlete_info(ID),
+	Age INT,
+	Height INT,
+	Weight FLOAT,
+	NOC TEXT,
+	Event TEXT,
 	games_id INT,
 	FOREIGN KEY (games_id) REFERENCES games(id),
-	medal TEXT
+	Medal TEXT
 );
 
 CREATE TABLE country (
